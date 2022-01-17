@@ -1,4 +1,12 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## Technologies
+
+- Railway - Cloud DB [https://railway.app/](Railway)
+- Prisma - ORM [https://www.prisma.io/](Prisma)
+- NextJS - Framework React [https://railway.app/](Nextjs)
+- Typescript - Language [https://www.typescriptlang.org/](Typescript)
+- Next Auth - Authentication with any providers [https://next-auth.js.org/](NextAuth)
+- Tailwindcss - Framework CSS [https://tailwindcss.com/](Tailwind)
+- Headless UI - UI Components styled with tailwind [https://headlessui.dev/](HeadlessUI)
 
 ## Getting Started
 
