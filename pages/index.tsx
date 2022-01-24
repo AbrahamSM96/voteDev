@@ -3,7 +3,8 @@ import Head from "next/head";
 import { Header } from "components/Header";
 import * as SVG from "components/SVGIcons";
 import { VotePill } from "../components/VotePill";
-
+import { useTranslations } from "hooks/useTranslations";
+import { VoteCode } from "../components/VoteCode";
 interface SectionTitleProps {
   children: string;
 }
@@ -13,19 +14,19 @@ const SectionTitle = ({ children }: SectionTitleProps) => (
 );
 
 const Home: NextPage = () => {
+  const i18n = useTranslations();
   return (
     <>
       <Head>
-        <title>vote-dev - Vota a los mejores jugadores del año</title>
+        <title>🗳 vota.dev - {i18n.SEO_TITLE}</title>
       </Head>
       <Header />
       <section className="mt-32">
-        <h1 className="max-w-5xl mx-auto text-8xl text-extrabold font-bold text-center">
-          Vote the best technologies to web development
+        <h1 className="max-w-5xl mx-auto text-5xl font-extrabold text-center text-black md:text-8xl">
+          {i18n.HERO_TITLE}
         </h1>
-        <p className="mt-10 text-black opacity-70 text-2xl text-center max-w-lg mx-auto">
-          Decide the best technologies and frameworks that have been the best of
-          the year. ¡Each vote count!
+        <p className="max-w-lg mx-auto mt-10 text-2xl text-center text-black opacity-70">
+          {i18n.HERO_SUBTITLE}
         </p>
         <div className="max-w-4xl p-10 mx-auto my-20 bg-white border-2 border-black rounded-lg">
           <SectionTitle>Best Framework</SectionTitle>
@@ -50,8 +51,27 @@ const Home: NextPage = () => {
           </ul>
 
           <SectionTitle>Best new functionality ECMAScript</SectionTitle>
-          <ul>
-            <li></li>
+          <ul className="flex flex-wrap gap-4 m-auto mb-12 place-content-center">
+            <VoteCode
+              image="es-nullish-coalescing.png"
+              title="es-nullish-coalescing"
+            ></VoteCode>
+            <VoteCode
+              image="es-nullish-coalescing.png"
+              title="es-nullish-coalescing"
+            ></VoteCode>
+            <VoteCode
+              image="es-nullish-coalescing.png"
+              title="es-nullish-coalescing"
+            ></VoteCode>
+            <VoteCode
+              image="es-nullish-coalescing.png"
+              title="es-nullish-coalescing"
+            ></VoteCode>
+            {/* <VoteCode image="es-optional-chaining.png"></VoteCode>
+            <VoteCode image="es-top-level-await.png"></VoteCode>
+            <VoteCode image="es-promise-any.png"></VoteCode>
+            <VoteCode image="es-replace-all.png"></VoteCode> */}
           </ul>
 
           <SectionTitle>Best functionality CSS</SectionTitle>
